@@ -140,29 +140,49 @@ def update_row():
     if not selected:
         return messagebox.showinfo("Info", "Select a row to update.")
 
+    # Get the new data from entries
     new_data = [entry.get().strip() for entry in entries]
     if not all(new_data):
         return messagebox.showwarning("Warning", "All fields must be filled.")
 
+    # Get the selected old data from treeview
     old_values = tree.item(selected[0])["values"]
 
+    # Clean the data (strip spaces, remove parentheses, etc.)
+    def clean_data(data):
+        return [str(d).strip().replace("()", "") for d in data]
+
+    # Clean both old and new data
+    old_values_clean = clean_data(old_values)
+    new_data_clean = clean_data(new_data)
+
+    # If there are no changes after cleaning
+    if old_values_clean == new_data_clean:
+        return messagebox.showinfo("Info", "No changes detected.")
+
+    # Update the rows in the CSV file
     updated_rows = []
     with open(FILE_PATH, newline='', encoding='utf-8') as f:
         reader = list(csv.reader(f))
-        headers = reader[0]
+        headers = reader[0]  # Extract headers
         for row in reader[1:]:
-            if row == old_values:
+            # If the row is the same as old values (after cleaning), update it with new data
+            if clean_data(row) == old_values_clean:
                 updated_rows.append(new_data)
             else:
                 updated_rows.append(row)
 
-    with open(FILE_PATH, 'w', newline='', encoding='utf-8') as f:
-        writer = csv.writer(f)
-        writer.writerow(headers)
-        writer.writerows(updated_rows)
+    # If there were any updates, write them back to the CSV
+    if updated_rows:
+        with open(FILE_PATH, 'w', newline='', encoding='utf-8') as f:
+            writer = csv.writer(f)
+            writer.writerow(headers)  # Write headers
+            writer.writerows(updated_rows)  # Write updated rows
+        load()  # Reload the treeview with updated data
+        clear_form()  # Clear the form
+    else:
+        messagebox.showinfo("Info", "No matching rows to update.")
 
-    load()
-    clear_form()
 
 def search_data():
     keyword = search_entry.get().strip().lower()
