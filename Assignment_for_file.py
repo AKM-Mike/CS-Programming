@@ -7,7 +7,7 @@ FILE_PATH = os.path.join(os.getcwd(),"music.csv") ###This is file path###
 
 ###This is main window###
 root = tk.Tk()
-root.geometry("600x600")
+root.geometry("600x800")
 root.iconbitmap(os.path.join(os.getcwd(),"Logo.ico"))
 root.title("CSV Table Viewer")
 
@@ -25,7 +25,7 @@ search_button.pack(side="left")
 
 # Treeview + Scrollbars
 tree_frame = tk.Frame(root)
-tree_frame.pack(fill="both", expand=True, padx=10, pady=5)
+tree_frame.pack(fill="both", padx=10, pady=5)
 
 vsb = tk.Scrollbar(tree_frame, orient="vertical")
 vsb.pack(side="right", fill="y")
@@ -79,11 +79,11 @@ def load():  ###read file and load it in,Let's go!###
         widget.destroy()
     entries.clear()
 
-    for header in tree["columns"]:
-        tk.Label(form_frame, text=header).pack()
-        e = tk.Entry(form_frame)
-        e.pack()
-        entries.append(e)
+    for i, header in enumerate(headers):
+        tk.Label(form_frame, text=header + ":", anchor="w", width=20).grid(row=i, column=0, sticky="w", padx=5, pady=3)
+        entry = tk.Entry(form_frame, width=50)
+        entry.grid(row=i, column=1, padx=5, pady=3)
+        entries.append(entry)
 
     search_label.config(text=f"Search by any field (e.g. {', '.join(tree['columns'][:2])}):")
 
