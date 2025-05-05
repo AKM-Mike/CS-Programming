@@ -1,17 +1,11 @@
-Artist Name,Released Date,Album,Song Name,Song Writer
-Taylor Swift,2020-07-24,Folklore,Cardigan,Taylor Swift
-Ed Sheeran,2017-03-03,(divide),Shape of You,Ed Sheeran
-Billie Eilish,2019-03-29,When We All Fall Asleep...,Bad Guy,Billie Eilish
-The Weeknd,2020-03-20,After Hours,Blinding Lights,Abel Tesfaye
-Bruno Mars,2016-11-18,24K Magic,That’s What I Like,Bruno Mars
-Dua Lipa,2020-03-27,Future Nostalgia,Don’t Start Now,Dua Lipa
-Harry Styles,2019-12-13,Fine Line,Watermelon Sugar,Harry Styles
-BTS,2020-11-20,BE,Life Goes On,"RM, Suga, J-Hope"
-Olivia Rodrigo,2021-05-21,SOUR,Drivers License,Olivia Rodrigo
-Justin Bieber,2021-03-19,Justice,Peaches,Justin Bieber
-Taylor Swift,2014-10-27,1989,Blank Space,Taylor Swift
-Ed Sheeran,2014-06-20,x (Multiply),Thinking Out Loud,Ed Sheeran
-Billie Eilish,2021-07-30,Happier Than Ever,Happier Than Ever,Billie Eilish
-Adele,2011-01-24,21,Rolling in the Deep,Adele
-The Weeknd,2015-08-28,Beauty Behind the Madness,The Hills,Abel Tesfaye
-Hozier,2024-03-22,Unreal Unearth,Too Sweet,Andrew Hozier-Byrne
+Song Name,Artist Name,Released Date,Release Month,Release Year,Album,Genre,Duration,Song Writer,Producer
+Lover,Taylor Swift,2019-08-23,August,2019,Lover,Pop,3:41,Taylor Swift,Jack Antonoff
+Shape of You,Ed Sheeran,2017-03-03,March,2017,Divide(%),Pop,3:53,Ed Sheeran,Steve Mac
+Bad Guy,Billie Eilish,2019-03-29,March,2019,When We All Fall Asleep...,Electropop,3:14,Billie Eilish,Finneas O'Connell
+Hello,Adele,2015-11-20,November,2015,25,Soul,4:55,Adele,Greg Kurstin
+Blinding Lights,The Weeknd,2020-03-20,March,2020,After Hours,Synth-pop,3:20,Abel Tesfaye,Max Martin
+Blank Space,Taylor Swift,2014-10-27,October,2014,1989,Pop,3:51,Taylor Swift,Max Martin
+Thinking Out Loud,Ed Sheeran,2014-06-20,June,2014,x (Multiply),Soft rock,4:41,Ed Sheeran,Jake Gosling
+Happier Than Ever,Billie Eilish,2021-07-30,July,2021,Happier Than Ever,Alternative,4:58,Billie Eilish,Finneas O'Connell
+Rolling in the Deep,Adele,2011-01-24,January,2011,21,Soul,3:48,Adele,Paul Epworth
+The Hills,The Weeknd,2015-08-28,August,2015,Beauty Behind the Madness,R&B,4:02,Abel Tesfaye,Illangelo
